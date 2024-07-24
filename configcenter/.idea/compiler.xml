@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="configapi" />
+        <module name="configclient" />
+        <module name="configconsole" />
+        <module name="configcore" />
+        <module name="configservice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="configapi" target="1.5" />
+      <module name="configcenter" target="1.5" />
+      <module name="configclient" target="1.5" />
+      <module name="configconsole" target="1.5" />
+      <module name="configcore" target="1.5" />
+      <module name="configservice" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

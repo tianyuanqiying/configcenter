@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/configapi/configapi.iml" filepath="$PROJECT_DIR$/configapi/configapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configcenter.iml" filepath="$PROJECT_DIR$/configcenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configclient/configclient.iml" filepath="$PROJECT_DIR$/configclient/configclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configconsole/configconsole.iml" filepath="$PROJECT_DIR$/configconsole/configconsole.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configcore/configcore.iml" filepath="$PROJECT_DIR$/configcore/configcore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configservice/configservice.iml" filepath="$PROJECT_DIR$/configservice/configservice.iml" />
+    </modules>
+  </component>
+</project>
