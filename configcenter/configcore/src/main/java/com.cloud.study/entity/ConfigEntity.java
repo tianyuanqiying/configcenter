@@ -40,4 +40,9 @@ public class ConfigEntity {
      * 更新时间
      */
     private Date updateTime;
+
+    /**
+     * 租户
+     */
+    private String tenant;
 }

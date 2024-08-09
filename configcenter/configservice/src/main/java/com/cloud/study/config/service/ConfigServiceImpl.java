@@ -9,14 +9,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ConfigServiceImpl implements ConfigService{
+    @Override
     public ConfigVO get(ConfigDTO configDTO) {
         return null;
     }
 
+    @Override
     public Boolean saveOrUpdateConfig(ConfigDTO configDTO) {
         return null;
     }
 
+    @Override
     public Boolean deleteById(String id) {
         return null;
     }
