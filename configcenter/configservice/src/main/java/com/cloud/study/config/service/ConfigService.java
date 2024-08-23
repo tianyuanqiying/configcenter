@@ -1,6 +1,7 @@
 package com.cloud.study.config.service;
 
 import com.cloud.study.dto.ConfigDTO;
+import com.cloud.study.dto.ConfigUpdateDTO;
 import com.cloud.study.vo.ConfigVO;
 
 public interface ConfigService {
@@ -16,7 +17,7 @@ public interface ConfigService {
      * @param configDTO
      * @return
      */
-    Boolean saveOrUpdateConfig(ConfigDTO configDTO);
+    Boolean saveOrUpdateConfig(ConfigUpdateDTO configDTO);
 
     /**
      * 删除配置

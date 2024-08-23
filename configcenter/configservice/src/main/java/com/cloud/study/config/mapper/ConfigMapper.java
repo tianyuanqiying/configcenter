@@ -1,11 +1,9 @@
 package com.cloud.study.config.mapper;
 
 import com.cloud.study.dto.ConfigDTO;
+import com.cloud.study.entity.ConfigEntity;
 import com.cloud.study.vo.ConfigVO;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 /**
  * @author user
@@ -14,21 +12,13 @@ import org.apache.ibatis.annotations.Select;
 public interface ConfigMapper {
 
     /**
-     * 查询配置详情
-     * @param id
-     * @return
-     */
-    @Select("select * from config_info where id = #{id}")
-    ConfigVO get(String id);
-
-    /**
      * 更新配置
-     * @param configDTO
+     * @param configEntity
      * @return
      */
-    @Insert("INSERT INTO (data_id, group_id, environment_name, content, md5, create_time, update_time) " +
-            "VALUES (#{dataId}, #{groupId}, #{environmentName}, #{content}, #{md5}, #{createTime}, #{updateTime})")
-    Boolean insert(ConfigDTO configDTO);
+    @Insert("INSERT INTO config_info ( data_id, group_id, environment_name, content, md5, create_time, update_time ) " +
+            "VALUE (#{configEntity.dataId}, #{configEntity.groupId}, #{configEntity.environmentName}, #{configEntity.content}, #{configEntity.md5}, #{configEntity.createTime}, #{configEntity.updateTime})")
+    Boolean insert(@Param("configEntity") ConfigEntity configEntity);
 
     /**
      * 删除配置
@@ -37,4 +27,10 @@ public interface ConfigMapper {
      */
     @Delete("delete from config_info where id = #{id}")
     Boolean deleteById(String id);
+
+    @Select("select * from config_info where data_id = #{configDTO.dataId} AND group_id = #{configDTO.groupId}")
+    ConfigEntity get(@Param("configDTO") ConfigDTO configDTO);
+
+    @Update("update config_info set content = #{content} , md5 = #{md5}, update_time = #{updateTime} where id = #{id}")
+    void update(ConfigEntity configEntity);
 }

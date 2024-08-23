@@ -1,4 +1,4 @@
-package com.cloud.study.config.common;
+package com.cloud.study.constants;
 
 /**
  * 时间常量
@@ -28,5 +28,11 @@ public class Constants {
 
 
     public static final String CLIENT_APP_NAME = "Client-AppName";
+
+    public static final String TEMP_APP_NAME = "TEMP_APP_NAME";
+
+    public static final String QUERY_CONFIG = "/config/get";
+    public static final String UPDATE_CONFIG = "/config/get";
+    public static final String DELETE_CONFIG = "/config/delete";
 
 }

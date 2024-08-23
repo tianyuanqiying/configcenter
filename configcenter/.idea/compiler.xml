@@ -13,13 +13,6 @@
         <module name="configservice" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="configapi" target="1.5" />
-      <module name="configcenter" target="1.5" />
-      <module name="configclient" target="1.5" />
-      <module name="configconsole" target="1.5" />
-      <module name="configcore" target="1.5" />
-      <module name="configservice" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8" />
   </component>
 </project>

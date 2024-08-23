@@ -1,11 +1,12 @@
 package com.cloud.study.config.controller;
 
+import com.cloud.study.config.service.ConfigService;
 import com.cloud.study.dto.ConfigDTO;
+import com.cloud.study.dto.ConfigUpdateDTO;
+import com.cloud.study.vo.ConfigVO;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,20 +15,26 @@ import java.util.Map;
  * 配置类接口
  * @author user
  */
-@RestController("/config")
+
+@Api(tags = "配置数据接口")
+@RestController
+@RequestMapping("/config")
 public class ConfigController {
+    @Autowired
+    ConfigService configService;
 
-    @GetMapping
-    public Map<String, Object> get(ConfigDTO configDTO) {
-        return new HashMap<String, Object>();
+    @GetMapping("/get")
+    public ConfigVO get(ConfigDTO configDTO) {
+        return configService.get(configDTO);
+
     }
 
-    @PostMapping
-    public Map<String, Object> saveOrUpdateConfig(ConfigDTO map) {
-        return new HashMap<String, Object>();
+    @PostMapping("/update")
+    public Boolean saveOrUpdateConfig(ConfigUpdateDTO map) {
+        return configService.saveOrUpdateConfig(map);
     }
 
-    @DeleteMapping
+    @PostMapping("delete")
     public Map<String, Object> delete(String id) {
         return new HashMap<String, Object>();
     }

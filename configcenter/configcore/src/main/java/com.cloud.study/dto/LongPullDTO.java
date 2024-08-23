@@ -9,6 +9,15 @@ public class LongPullDTO {
     private String groupId;
     private String contentMd5;
 
+    public LongPullDTO() {
+    }
+
+    public LongPullDTO(String dataId, String groupId, String contentMd5) {
+        this.dataId = dataId;
+        this.groupId = groupId;
+        this.contentMd5 = contentMd5;
+    }
+
     public String getDataId() {
         return dataId;
     }
